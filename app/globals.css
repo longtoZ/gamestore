@@ -18,10 +18,31 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #171717;
+}
+
+.cardElement {
+  transform: scale(1);
+}
+
+.cardElement, .cardElement > * {
+  transition: ease-in-out 0.4s;
+}
+
+.cardElement:hover {
+  background: #22d3ee !important;
+  transform: scale(1.1);
+}
+
+.cardElement:hover > * {
+  color: white;
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
 }

@@ -1,0 +1,38 @@
+"filename", "language", "JSON with Comments", "TypeScript", "JavaScript", "Markdown", "JSON", "CSS", "TypeScript JSX", "XML", "comment", "blank", "total"
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\.eslintrc.json", "JSON", 0, 0, 0, 0, 3, 0, 0, 0, 0, 1, 4
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\README.md", "Markdown", 0, 0, 0, 23, 0, 0, 0, 0, 0, 14, 37
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\app\Provider.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 10, 0, 0, 4, 14
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\app\api\auth\[...nextauth]\route.ts", "TypeScript", 0, 52, 0, 0, 0, 0, 0, 0, 0, 12, 64
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\app\dashboard\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 86, 0, 1, 13, 100
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\app\globals.css", "CSS", 0, 0, 0, 0, 0, 40, 0, 0, 0, 9, 49
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\app\layout.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 26, 0, 0, 5, 31
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\app\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 107, 0, 0, 7, 114
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\app\products\[productID]\ProductDetail.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 92, 0, 2, 12, 106
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\app\products\[productID]\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 27, 0, 0, 7, 34
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\app\products\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 83, 0, 2, 17, 102
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\app\signin\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 15, 0, 0, 4, 19
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\components\Accordion.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 44, 0, 2, 9, 55
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\components\AddProduct.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 183, 0, 0, 25, 208
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\components\Carousel.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 45, 0, 0, 9, 54
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\components\CategorySelection.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 24, 0, 1, 5, 30
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\components\DeleteProduct.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 19, 0, 0, 6, 25
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\components\EditProduct.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 191, 0, 0, 28, 219
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\components\LoginForm.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 70, 0, 0, 14, 84
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\components\NavBar.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 29, 0, 4, 6, 39
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\components\ProductCard.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 41, 0, 1, 10, 52
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\components\UpdateProduct.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\components\User.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 17, 0, 0, 4, 21
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\lib\mongodb.ts", "TypeScript", 0, 25, 0, 0, 0, 0, 0, 0, 0, 7, 32
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\next.config.js", "JavaScript", 0, 0, 2, 0, 0, 0, 0, 0, 1, 2, 5
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\package-lock.json", "JSON", 0, 0, 0, 0, 8010, 0, 0, 0, 0, 1, 8011
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\package.json", "JSON", 0, 0, 0, 0, 36, 0, 0, 0, 0, 1, 37
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\pages\api\products.js", "JavaScript", 0, 0, 26, 0, 0, 0, 0, 0, 2, 5, 33
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\pages\api\products\[productID].js", "JavaScript", 0, 0, 38, 0, 0, 0, 0, 0, 2, 10, 50
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\pages\api\update.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\postcss.config.js", "JavaScript", 0, 0, 6, 0, 0, 0, 0, 0, 0, 1, 7
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\public\next.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\public\vercel.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\tailwind.config.js", "JavaScript", 0, 0, 32, 0, 0, 0, 0, 0, 2, 1, 35
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\tailwind.config.ts", "TypeScript", 0, 19, 0, 0, 0, 0, 0, 0, 0, 2, 21
+"c:\Users\Long To\Documents\Coding workplace\gamestore\my-project\tsconfig.json", "JSON with Comments", 25, 0, 0, 0, 0, 0, 0, 0, 2, 1, 28
+"Total", "-", 25, 96, 104, 23, 8049, 40, 1109, 2, 22, 254, 9724
