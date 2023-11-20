@@ -1,6 +1,9 @@
+'use client'
+
 import { Rating } from "@mui/material";
 import React from "react";
 import Carousel from '../../../components/Carousel';
+import {useRouter} from 'next/navigation'
 
 interface ProductDetailProps {
     product: any
@@ -46,6 +49,7 @@ const TextWithBullet: React.FC<TextWithBulletProps> = ({ text }) => {
 };
 
 const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
+    const router = useRouter()
     return (
         <div className="relative">
             <div className="fixed w-full top-0">
@@ -65,7 +69,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                         <div>
                             <h1 className="text-3xl font-medium">{product.name}</h1>
                             <p className="text-sm text-neutral-400 mt-4">{product.shortDesc}</p>
-                            <button className='w-48 my-4 px-4 py-2 rounded-md cursor-pointer font-medium bg-gradient-to-br from-green-400 to-blue-500 text-white'>Buy at ${product.price}</button>
+                            <button onClick={() => router.push(`/payment/${product._id}`)} className='w-48 my-4 px-4 py-2 rounded-md cursor-pointer font-medium bg-gradient-to-br from-green-400 to-blue-500 text-white'>Buy at ${product.price}</button>
                             <div>
                                 <Rating value={product.rating} readOnly/>
                             </div>

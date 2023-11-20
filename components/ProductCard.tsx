@@ -27,12 +27,16 @@ const ProductCard: React.FC<ProductCardProps> = ({
   const router = useRouter();
 
   return (
-    <div className="bg-neutral-800 rounded-lg shadow-md cursor-pointer overflow-hidden" onClick={() => router.push(`/products/${_id}`)}>
-        <img
-          src={`${imageURL}`}
-          alt={name}
-          className="w-full h-60 object-cover p-2 rounded-2xl overflow-hidden"
-        />
+    <div className="bg-neutral-800 rounded-lg shadow-md cursor-pointer overflow-hidden relative" onClick={() => router.push(`/products/${_id}`)}>
+        <div className='relative'>
+          <img
+            src={`${imageURL}`}
+            alt={name}
+            className="w-full h-60 object-coverrounded-2xl overflow-hidden"
+          />
+          <div className='z-10 absolute bottom-0 w-full h-48 bg-gradient-to-t from-neutral-800'></div>
+        </div>
+        
         <div className='p-6'>
           <h2 className="text-2xl font-bold text-neutral">{name}</h2>
           <p className="text-neutral-200">${price}</p>

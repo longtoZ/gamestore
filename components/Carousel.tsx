@@ -11,7 +11,7 @@ interface SlidesProps {
 }
 
 
-const Carousel: React.FC<SlidesProps> = ({slides, autoSlide, autoSlideInterval, blur}) => {
+const Carousel = ({slides, autoSlide, autoSlideInterval, blur}:SlidesProps) => {
     const [current, setCurrent] = useState(0)
 
     const prev = () => setCurrent(current => (current==0 ? slides.length-1 : current-1))
@@ -25,7 +25,7 @@ const Carousel: React.FC<SlidesProps> = ({slides, autoSlide, autoSlideInterval, 
     }, [])
 
     return (
-        <div className="overflow-hidden relative" >
+        <div className="overflow-hidden relative" style={{height:'inherit'}}>
             <div className="flex transition-transform ease-in-out duration-500" style={{transform: `translateX(-${current*100}%)`, filter: `${blur ? 'brightness(0.5) blur(2px)' : ''}`}}>
                 {slides.map(s => (
                     <img src={s}></img>

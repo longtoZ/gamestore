@@ -1,9 +1,11 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import CategorySelection from '../../components/CategorySelection';
-import ProductCard from '../../components/ProductCard';
-import Carousel from '../../components/Carousel';
+import CategorySelection from '@/components/CategorySelection';
+import ProductCard from '@/components/ProductCard';
+import Carousel from '@/components/Carousel';
+import LeftSideBar from '@/components/LeftSideBar';
+import RightSideBar from '@/components/RightSideBar';
 
 import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
 import ExtensionIcon from '@mui/icons-material/Extension';
@@ -51,9 +53,13 @@ const Page: React.FC = () => {
   };
 
   return (
-      <div className="mt-8">
-        <div className='lg:w-2/3 md:w-full mx-auto relative'>
-          <div className='z-10 absolute top-0 w-full h-44 bg-gradient-to-b from-neutral-900'></div>
+    <div className='relative flex flex-row'>
+      <div className='w-60'>
+        <LeftSideBar/>
+      </div>
+      <div className="mt-20 mx-auto" style={{width:'65%'}}>
+        <div className='w-full mx-auto relative overflow-hidden rounded-xl' style={{height:'30rem'}}>
+          {/* <div className='z-10 absolute top-0 w-full h-44 bg-gradient-to-b from-neutral-900'></div> */}
           <div className='z-10 absolute left-0 right-0 top-1/3'>
             <h1 className='text-8xl text-center font-extrabold'>Game Store</h1>
             <h1 className='text-6xl text-center font-semibold text-cyan-500'>Ultimate</h1>
@@ -61,40 +67,47 @@ const Page: React.FC = () => {
               <button className='w-40 mt-10 px-4 py-2 rounded-md cursor-pointer font-bold bg-gradient-to-br from-green-400 to-blue-500 text-white'>Explore ➤</button>
             </div>
           </div>
-          <Carousel autoSlide={true} autoSlideInterval={3000} slides={slide_images} blur={true}/>
-          <div className='z-10 absolute bottom-0 w-full h-44 bg-gradient-to-t from-neutral-900 '></div>
+          <div style={{height:'30rem'}}>
+            <Carousel autoSlide={true} autoSlideInterval={3000} slides={slide_images} blur={true}/>
+
+          </div>
+          {/* <div className='z-10 absolute bottom-0 w-full h-44 bg-gradient-to-t from-neutral-900 '></div> */}
         </div>
 
         <div className='w-2/3 mx-auto grid grid-cols-4 gap-4 mt-10'>
-          <div className='w-32 h-32 rounded-lg text-center flex justify-center flex-col cursor-pointer cardElement' style={{background: '#1e1e1e'}}>
+          <div className='mx-auto w-32 h-32 rounded-lg text-center flex justify-center flex-col cursor-pointer cardElement' style={{background: '#1e1e1e'}}>
             <VideogameAssetIcon className='w-full text-5xl text-cyan-400'/>
             <p className='text-sm text-neutral-400 mt-1'>Consoles</p>
-            </div>
-          <div className='w-32 h-32 rounded-lg text-center flex justify-center flex-col cursor-pointer cardElement' style={{background: '#1e1e1e'}}>
+          </div>
+          <div className='mx-auto w-32 h-32 rounded-lg text-center flex justify-center flex-col cursor-pointer cardElement' style={{background: '#1e1e1e'}}>
             <ExtensionIcon className='w-full text-5xl text-cyan-400'/>
             <p className='text-sm text-neutral-400 mt-1'>Games</p>
-            </div>
-          <div className='w-32 h-32 rounded-lg text-center flex justify-center flex-col cursor-pointer cardElement' style={{background: '#1e1e1e'}}>
+          </div>
+          <div className='mx-auto w-32 h-32 rounded-lg text-center flex justify-center flex-col cursor-pointer cardElement' style={{background: '#1e1e1e'}}>
             <HeadphonesIcon className='w-full text-5xl text-cyan-400'/>
             <p className='text-sm text-neutral-400 mt-1'>Accessories</p>
-            </div>
-          <div className='w-32 h-32 rounded-lg text-center flex justify-center flex-col cursor-pointer cardElement' style={{background: '#1e1e1e'}}>
+          </div>
+          <div className='mx-auto w-32 h-32 rounded-lg text-center flex justify-center flex-col cursor-pointer cardElement' style={{background: '#1e1e1e'}}>
             <AddShoppingCartIcon className='w-full text-5xl text-cyan-400'/>
             <p className='text-sm text-neutral-400 mt-1'>Deals</p>
-            </div>
+          </div>
         </div>
 
         <div className='mx-20 mt-36'>
           <h1 className="text-4xl font-bold my-4 mt-16">Category</h1>
           <CategorySelection categories={categories} onSelectCategory={handleSelectCategory} selectedCategory={selectedCategory}/>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-          {filteredProducts.map((product: any) => (
-            <ProductCard key={product._id} {...product} />
-          ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {filteredProducts.map((product: any) => (
+              <ProductCard key={product._id} {...product} />
+            ))}
           </div>
         </div>
 
       </div>
+      <div className='w-72'>
+        <RightSideBar/>
+      </div>
+    </div>
   );
 };
 
