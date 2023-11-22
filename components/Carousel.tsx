@@ -25,10 +25,10 @@ const Carousel = ({slides, autoSlide, autoSlideInterval, blur}:SlidesProps) => {
     }, [])
 
     return (
-        <div className="overflow-hidden relative" style={{height:'inherit'}}>
-            <div className="flex transition-transform ease-in-out duration-500" style={{transform: `translateX(-${current*100}%)`, filter: `${blur ? 'brightness(0.5) blur(2px)' : ''}`}}>
+        <div className="overflow-hidden relative w-full" style={{height:'inherit'}}>
+            <div className="flex transition-transform ease-in-out duration-500 relative w-full" style={{height:'inherit', transform: `translateX(-${current*100}%)`, filter: `${blur ? 'brightness(0.5) blur(2px)' : ''}`}}>
                 {slides.map(s => (
-                    <img src={s}></img>
+                    <img src={s} className="w-full object-cover"></img>
                 ))}
             </div>
             <div className="absolute inset-0 flex items-center justify-between p-4">

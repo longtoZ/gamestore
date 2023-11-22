@@ -2,8 +2,12 @@
 
 import { Rating } from "@mui/material";
 import React from "react";
-import Carousel from '../../../components/Carousel';
 import {useRouter} from 'next/navigation'
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation} from 'swiper/modules';
 
 interface ProductDetailProps {
     product: any
@@ -89,8 +93,21 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                             <h1 className="my-4 text-xl font-bold">Screenshots</h1>
                             <div className="w-full mb-4" style={{border:'1px solid #a3a3a3'}}></div>
                             <div className="overflow-hidden rounded-lg">
-                                <Carousel autoSlide={true} autoSlideInterval={3000} slides={product.screenshots} blur={false}/>
-
+                            <Swiper
+                                slidesPerView={1}
+                                spaceBetween={0}
+                                pagination={{clickable: true}}
+                                navigation={true}
+                                loop={true}
+                                modules={[Pagination, Navigation]}
+                                style={{height:'35rem'}}
+                                >
+                                {product.screenshots.map((i:string) => (
+                                <SwiperSlide>
+                                    <img src={i} alt="" style={{width:'100%'}}/>
+                                </SwiperSlide>
+                                ))}
+                            </Swiper>
                             </div>
                         </div>
                         <div className="py-6 px-10 my-4 bg-neutral-800 bg-opacity-60 rounded-lg">

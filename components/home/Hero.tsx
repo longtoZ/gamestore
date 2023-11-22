@@ -1,11 +1,13 @@
 'use client'
 
 import React ,{useRef, useEffect} from 'react'
+import {useRouter} from 'next/navigation'
 import {motion, AnimatePresence, useScroll, useTransform} from 'framer-motion'
 import Lenis from '@studio-freight/lenis'
 
 
 const Hero = () => {
+    const router = useRouter()
     const parallelogramDisplay = {
         animate: (index: number) => ({
             y: 20,
@@ -77,7 +79,7 @@ const Hero = () => {
                 <p>Embark on a grand adventure through our virtual realm, where you can explore an expansive collection of video games, consoles, and accessories at the most competitive prices.</p>
             
                 <div className='flex flex-row justify-between w-1/2 mt-10'>
-                <button className='w-36 h-12 bg-gradient-to-br from-red-500 to-amber-500 rounded-lg px-4 py-2'>Explore</button>
+                <button className='w-36 h-12 bg-gradient-to-br from-red-500 to-amber-500 rounded-lg px-4 py-2'  onClick={() => router.push('/products/')}>Explore</button>
                 <button className='w-36 h-12 bg-transparent border-2 rounded-lg px-4 py-2'>Learn more</button>
                 </div>
             </div>
