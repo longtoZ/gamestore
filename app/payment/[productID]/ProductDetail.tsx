@@ -6,13 +6,38 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ScheduleIcon from '@mui/icons-material/Schedule';
 import LockIcon from '@mui/icons-material/Lock';
 import MoneyIcon from '@mui/icons-material/Money';
-import React, { useState } from "react";
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import React, { useState, useEffect } from "react";
+
+
+const CountDown = ({seconds, link} : {seconds: number, link: string}) => {
+    const [countdown, setCountdown] = useState(seconds)
+
+    useEffect(() => {
+        const current = setTimeout(() => {
+            setCountdown(prev => prev-1)
+        }, 1000)
+
+        if (countdown <= 0) {
+            clearInterval(current)
+            location.replace(link)
+        }
+
+        return () => clearTimeout(current)
+    }, [countdown])
+
+    return (
+        <p>Thanks for choosing our product. You will be directed to download page in <span className='text-green-500'>{countdown}</span></p>
+    )
+}
 
 interface ProductDetailProps {
     product: any
 }
 
 const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
+    const [showModal, setShowModal] = useState(false)
+
     const [credit, setCredit] = useState(true)
     const [gpay, setGpay] = useState(false)
     const [paypal, setPaypal] = useState(false)
@@ -120,10 +145,23 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
 
                         <p className='my-6 text-neutral-400 text-sm'>Your transaction is secured with SSL encryption</p>
                         
-                        <button className='w-full p-4 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg'>Complete Purchase</button>
+                        <button className='w-full p-4 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg' onClick={() => setShowModal(true)}>Complete Purchase</button>
                     </div>
                 </div>
             </div>
+
+            {
+                showModal ? (
+                    <div className="fixed inset-0 flex items-center justify-center z-20 bg-black bg-opacity-50">
+                        <div className=' w-64 mx-auto bg-neutral-800 py-4 px-6 rounded-lg text-center'>
+                            <CheckCircleOutlineIcon className='text-4xl'/>
+                            <h1 className='text-2xl font-bold'>Success</h1>
+                            <CountDown seconds={5} link={product.link}/>
+                        </div>
+                    </div>
+
+                ) : null
+            }
 
         </div>
 

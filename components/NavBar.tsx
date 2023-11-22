@@ -23,7 +23,6 @@ const NavBar: React.FC = () => {
   
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
     const prev = scrollYProgress.getPrevious()
-    console.log(prev, latest)
     if (latest > prev) {
       setHidden(true)
     } else {

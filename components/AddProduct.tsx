@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import AddIcon from '@mui/icons-material/Add';
 import { Add } from '@mui/icons-material';
 
 const AddProduct = () => {
