@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image'
 
 import CategorySelection from '@/components/CategorySelection';
 import ProductCard from '@/components/ProductCard';

@@ -4,6 +4,7 @@ import React ,{useRef, useEffect} from 'react'
 import {useRouter} from 'next/navigation'
 import {motion, AnimatePresence, useScroll, useTransform} from 'framer-motion'
 import Lenis from '@studio-freight/lenis'
+import Image from 'next/image'
 
 
 const Hero = () => {
@@ -44,7 +45,7 @@ const Hero = () => {
     <AnimatePresence>
         <section ref={ref} style={{height:'110vh'}}>
             <motion.div className='relative' style={{y: backgroundY}}>
-                <img src='/main_wallpaper.jpg' className='w-full' style={{filter:'brightness(0.7)', zIndex:'-5'}}/>
+                <img alt="" src='/main_wallpaper.jpg' className='w-full' style={{filter:'brightness(0.7)', zIndex:'-5'}}/>
                 {/* <img src="/simple_line_pattern_background.png" className='absolute top-0' style={{filter:'invert(1) opacity(0.1) blur(1px)'}}/> */}
                 {/* <div className='z-10 bottom-0 absolute w-full h-64 bg-gradient-to-t from-neutral-900'></div> */}
             </motion.div>

@@ -2,7 +2,6 @@
 
 import React ,{ useState, useRef }from 'react'
 import {motion, useScroll, useTransform, AnimatePresence} from 'framer-motion'
-import { Height } from '@mui/icons-material'
 
 
 const Title = () => {

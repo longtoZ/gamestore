@@ -3,6 +3,8 @@
 import React, {useEffect, useState} from 'react'
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from 'next/navigation';
+import Image from 'next/image'
+
 
 const FindProduct = () => {
     const searchParams = useSearchParams()
@@ -24,7 +26,7 @@ const FindProduct = () => {
     <div className='mt-20 w-full flex justify-center flex-col'>
         {products.map((e: any) => (
             <div className='w-1/2 p-4 my-6 mx-auto bg-opacity-50 rounded-lg cursor-pointer transition ease-in-out duration-200 hover:bg-neutral-800 flex' onClick={() => router.push(`/products/${e._id}`)}>
-                <img src={e.imageURL} alt="" className='w-28 mr-6 rounded-lg'/>
+                <img alt="" src={e.imageURL} className='w-28 mr-6 rounded-lg'/>
                 <div>
                     <h1 className='text-xl font-bold'>{e.name}</h1>
                     <p className='text-sm text-neutral-400'>{e.shortDesc}</p>

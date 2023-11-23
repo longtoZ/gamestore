@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import React, { useRef, useEffect } from 'react'
 import Lenis from '@studio-freight/lenis'
+import Image from 'next/image'
 
 const images = ['/posters/one.jpg', '/posters/two.jpg', '/posters/three.jpg', '/posters/four.jpg', '/posters/five.jpg', '/posters/six.jpg', '/posters/seven.jpg', '/posters/eight.jpg', '/posters/nine.jpg', '/posters/ten.jpg', '/posters/eleven.jpg', '/posters/twelve.jpg', '/posters/thirteen.jpg', '/posters/fourteen.jpg', '/posters/fifteen.jpg', '/posters/sixteen.jpg', '/posters/seventeen.jpg', '/posters/eighteen.jpg']
 
