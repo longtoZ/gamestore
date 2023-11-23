@@ -11,7 +11,7 @@ const Column = ({images, y=0}:any) => {
           {
             images.map((src: any, index: any) => {
               return <div key={index} className='image-container'>
-                <img src={src} alt="image" className='object-cover'/>
+                <Image src={src} alt="image" className='object-cover'/>
               </div>
             })
           }
@@ -48,7 +48,7 @@ const Slides = () => {
   return (
     <div className='relative'>
       <div ref={container} className='gallery w-full px-10 relative'>
-        {/* <img src="/img/flame-god.jpg" alt="" className='-z-10 absolute top-0 left-0 right-0 w-full h-full  overflow-hidden' style={{filter:'blur(6px) brightness(0.25)'}}/> */}
+        {/* <Image src="/img/flame-god.jpg" alt="" className='-z-10 absolute top-0 left-0 right-0 w-full h-full  overflow-hidden' style={{filter:'blur(6px) brightness(0.25)'}}/> */}
 
         <Column images={[images[0], images[1], images[2]]} y={y1}/>
         <Column images={[images[3], images[4], images[5]]} y={y2}/>

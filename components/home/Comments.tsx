@@ -24,7 +24,7 @@ const Reveal = ({children, floatRight}: Props) => {
             mainControls.start('hidden')
             slideControls.start('hidden')
         }
-    },[isInView])
+    },[isInView, mainControls, slideControls])
 
     return (
         <div ref={ref} className='relative w-fit overflow-hidden' style={{float: floatRight ? 'right' : 'none'}}>

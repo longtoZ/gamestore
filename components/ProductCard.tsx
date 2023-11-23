@@ -4,6 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 import {Rating} from '@mui/material';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+
 
 interface ProductCardProps {
   _id: number;
@@ -29,7 +31,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   return (
     <div className="bg-neutral-800 rounded-lg shadow-md cursor-pointer overflow-hidden relative" style={{height:'28rem'}} onClick={() => router.push(`/products/${_id}`)}>
         <div className='relative'>
-          <img
+          <Image
             src={`${imageURL}`}
             alt={name}
             className="w-full h-52 object-coverrounded-2xl overflow-hidden rounded-lg"

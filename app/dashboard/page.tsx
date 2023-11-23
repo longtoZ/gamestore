@@ -42,7 +42,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     <div className="overflow-hidden w-full bg-neutral-800 my-4 rounded-lg p-4 bg-opacity-60 relative">
       <div className="absolute w-full h-full -z-10 top-0 left-0" style={{backgroundImage:`url("${backgroundURL}")`, filter:'blur(5px)'}}></div>
       <div className="flex flex-row">
-        <img src={imageURL} className="h-48 w-48 object-cover rounded-lg" alt="img"/>
+        <Image src={imageURL} className="h-48 w-48 object-cover rounded-lg" alt="img"/>
         <div className="flex-1 p-4">
           <h2 className="text-lg font-bold">{name}</h2>
           <p className="text-gray-400">{shortDesc}</p>

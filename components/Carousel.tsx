@@ -2,6 +2,8 @@
 
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+
 
 interface SlidesProps {
     slides: string[];
@@ -22,13 +24,13 @@ const Carousel = ({slides, autoSlide, autoSlideInterval, blur}:SlidesProps) => {
             const slideInterval = setInterval(next, autoSlideInterval)
             return () => clearInterval(slideInterval)
         }
-    }, [])
+    }, [autoSlide, autoSlideInterval])
 
     return (
         <div className="overflow-hidden relative w-full" style={{height:'inherit'}}>
             <div className="flex transition-transform ease-in-out duration-500 relative w-full" style={{height:'inherit', transform: `translateX(-${current*100}%)`, filter: `${blur ? 'brightness(0.5) blur(2px)' : ''}`}}>
                 {slides.map(s => (
-                    <img key={s} src={s} className="w-full object-cover"></img>
+                    <Image alt="" key={s} src={s} className="w-full object-cover"/>
                 ))}
             </div>
             <div className="absolute inset-0 flex items-center justify-between p-4">

@@ -8,6 +8,7 @@ import LockIcon from '@mui/icons-material/Lock';
 import MoneyIcon from '@mui/icons-material/Money';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import React, { useState, useEffect } from "react";
+import Image from 'next/image';
 
 
 const CountDown = ({seconds, link} : {seconds: number, link: string}) => {
@@ -24,7 +25,7 @@ const CountDown = ({seconds, link} : {seconds: number, link: string}) => {
         }
 
         return () => clearTimeout(current)
-    }, [countdown])
+    }, [countdown, link])
 
     return (
         <p>Thanks for choosing our product. You will be directed to download page in <span className='text-green-500'>{countdown}</span></p>
@@ -48,7 +49,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
     return (
         <div className='relative'>
             <div className='fixed top-0 left-0 right-0 w-full h-full -z-20 -mt-36'>
-                <img src={product.backgroundURL} alt="" style={{filter: 'blur(10px'}}/>
+                <Image src={product.backgroundURL} alt="" style={{filter: 'blur(10px'}}/>
                 <div className='z-10 absolute w-full h-52 bg-gradient-to-t from-neutral-900' style={{top: '25rem'}}>
                 </div>
                 <div className='z-10 absolute w-full h-full bg-neutral-900' style={{top: '38rem'}}></div>
@@ -56,7 +57,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
 
             <div className="flex flex-row w-2/3 mt-40 mx-auto">
                 <div className="flex flex-row w-1/2 mx-6 p-6 bg-neutral-800 bg-opacity-70 rounded-lg ">
-                    <img src={product.imageURL} alt="" className='w-32 h-32 m-4 rounded-lg'/>
+                    <Image src={product.imageURL} alt="" className='w-32 h-32 m-4 rounded-lg'/>
                     <div>
                         <h1 className="font-bold text-xl my-2">Product name</h1>
                         <div className='w-full border border-neutral-600 my-2'></div>
