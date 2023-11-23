@@ -98,9 +98,21 @@ const Comments = () => {
                 <Reveal>
                     <div className='grid grid-cols-2'>
                         <h1 style={{fontSize:'5rem'}}>
-                            <span className='text-red-400'>" </span>This is the biggest game site I've ever seen.<span className='text-red-400'> "</span>
+                            <span className='text-red-400'>&quot; </span>This is the biggest game site I&apos;ve ever seen.<span className='text-red-400'> &quot;</span>
                         </h1>
-                        <motion.img src="/brand/twitch.png" alt="" variants={floating} animate='animate' className='mx-auto my-auto' style={{width:'16rem'}}/>
+                        <motion.img src="/brand/twitch.png" alt="" variants={{
+        animate: (index: number) => ({
+            y: 40,
+            transition: {
+              ease: 'easeInOut',
+              repeatType: "reverse",
+              repeat: Infinity,
+              duration: 2,
+              delay: index
+          }
+    
+        })
+    }} animate='animate' className='mx-auto my-auto' style={{width:'16rem'}}/>
                     </div>
                 </Reveal>
                 <Reveal>
@@ -111,9 +123,21 @@ const Comments = () => {
             <section className='text-right my-52'>
                 <Reveal>
                     <div className='grid grid-cols-2'>
-                        <motion.img src="/brand/blogger.png" alt="" variants={floating} animate='animate' className='mx-auto my-auto' style={{width:'16rem'}}/>
+                        <motion.img src="/brand/blogger.png" alt="" variants={{
+        animate: (index: number) => ({
+            y: 40,
+            transition: {
+              ease: 'easeInOut',
+              repeatType: "reverse",
+              repeat: Infinity,
+              duration: 2,
+              delay: index
+          }
+    
+        })
+    }} animate='animate' className='mx-auto my-auto' style={{width:'16rem'}}/>
                         <h1 style={{fontSize:'5rem'}}>
-                            <span className='text-red-400'>" </span>I love the variety of game categories presented in this store.<span className='text-red-400'> "</span>
+                            <span className='text-red-400'>&quot; </span>I love the variety of game categories presented in this store.<span className='text-red-400'> &quot;</span>
                         </h1>
                     </div>
 
@@ -127,9 +151,21 @@ const Comments = () => {
                 <Reveal>
                     <div className='grid grid-cols-2'>
                         <h1 style={{fontSize:'5rem'}}>
-                            <span className='text-red-400'>" </span>Absolutely amazing! That's all I wanna say<span className='text-red-400'> "</span>
+                            <span className='text-red-400'>&quot; </span>Absolutely amazing! That&apos;s all I wanna say<span className='text-red-400'> &quot;</span>
                         </h1>
-                        <motion.img src="/brand/youtube.png" alt="" variants={floating} animate='animate' className='mx-auto my-auto' style={{width:'16rem'}}/>
+                        <motion.img src="/brand/youtube.png" alt="" variants={{
+        animate: (index: number) => ({
+            y: 40,
+            transition: {
+              ease: 'easeInOut',
+              repeatType: "reverse",
+              repeat: Infinity,
+              duration: 2,
+              delay: index
+          }
+    
+        })
+    }} animate='animate' className='mx-auto my-auto' style={{width:'16rem'}}/>
                     </div>
                 </Reveal>
                 <Reveal>
@@ -140,9 +176,21 @@ const Comments = () => {
             <section className='text-right my-52'>
                 <Reveal>
                     <div className='grid grid-cols-2'>
-                        <motion.img src="/brand/twitter.png" alt="" variants={floating} animate='animate' className='mx-auto my-auto' style={{width:'16rem'}}/>
+                        <motion.img src="/brand/twitter.png" alt="" variants={{
+        animate: (index: number) => ({
+            y: 40,
+            transition: {
+              ease: 'easeInOut',
+              repeatType: "reverse",
+              repeat: Infinity,
+              duration: 2,
+              delay: index
+          }
+    
+        })
+    }} animate='animate' className='mx-auto my-auto' style={{width:'16rem'}}/>
                         <h1 style={{fontSize:'5rem'}}>
-                            <span className='text-red-400'>" </span>To be honest, this website should be more and more popular.<span className='text-red-400'> "</span>
+                            <span className='text-red-400'>&quot; </span>To be honest, this website should be more and more popular.<span className='text-red-400'> &quot;</span>
                         </h1>
                     </div>
 

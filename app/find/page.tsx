@@ -25,7 +25,7 @@ const FindProduct = () => {
   return (
     <div className='mt-20 w-full flex justify-center flex-col'>
         {products.map((e: any) => (
-            <div className='w-1/2 p-4 my-6 mx-auto bg-opacity-50 rounded-lg cursor-pointer transition ease-in-out duration-200 hover:bg-neutral-800 flex' onClick={() => router.push(`/products/${e._id}`)}>
+            <div key={e} className='w-1/2 p-4 my-6 mx-auto bg-opacity-50 rounded-lg cursor-pointer transition ease-in-out duration-200 hover:bg-neutral-800 flex' onClick={() => router.push(`/products/${e._id}`)}>
                 <img alt="" src={e.imageURL} className='w-28 mr-6 rounded-lg'/>
                 <div>
                     <h1 className='text-xl font-bold'>{e.name}</h1>

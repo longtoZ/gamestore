@@ -24,7 +24,7 @@ export const authOptions:NextAuthOptions = {
         password: {label:"password"}
       },
 
-      async authorize(credentials) {
+      async authorize(credentials: Record<string, string>): Promise<any> {
 
         const {username, password} = credentials
 
@@ -34,7 +34,7 @@ export const authOptions:NextAuthOptions = {
             if (!user) {
                 return null
             } else {
-                const userPassword = user['props']['user']['password']
+                const userPassword = user.props?.user?.password
                 if (password === userPassword) {
                     return user
                 }

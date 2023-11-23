@@ -56,7 +56,7 @@ const Page: React.FC = () => {
   const handleRecommendedProducts = (data: any) => {
     const totalItems = 6;
     const randomIndexes: number[] = []
-    const final = []
+    const final: any[] = []
 
     for (let i=0; i<totalItems; i++) {
       let index = Math.floor(Math.random() * data.length)

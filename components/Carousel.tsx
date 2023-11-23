@@ -28,7 +28,7 @@ const Carousel = ({slides, autoSlide, autoSlideInterval, blur}:SlidesProps) => {
         <div className="overflow-hidden relative w-full" style={{height:'inherit'}}>
             <div className="flex transition-transform ease-in-out duration-500 relative w-full" style={{height:'inherit', transform: `translateX(-${current*100}%)`, filter: `${blur ? 'brightness(0.5) blur(2px)' : ''}`}}>
                 {slides.map(s => (
-                    <img src={s} className="w-full object-cover"></img>
+                    <img key={s} src={s} className="w-full object-cover"></img>
                 ))}
             </div>
             <div className="absolute inset-0 flex items-center justify-between p-4">
@@ -43,7 +43,7 @@ const Carousel = ({slides, autoSlide, autoSlideInterval, blur}:SlidesProps) => {
             <div className="absolute bottom-4 right-0 left-0">
                 <div className="flex items-center justify-center gap-2">
                     {slides.map((_,i) => (
-                        <div className={`transition-all w-3 h-3 bg-white rounded-full ${current == i ? "p-2" : "bg-opacity-50"}`}></div>
+                        <div key={i} className={`transition-all w-3 h-3 bg-white rounded-full ${current == i ? "p-2" : "bg-opacity-50"}`}></div>
                     ))}
                 </div>
             </div>

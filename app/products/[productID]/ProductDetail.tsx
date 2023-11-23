@@ -105,7 +105,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                                 style={{height:'35rem'}}
                                 >
                                 {product.screenshots.map((i:string) => (
-                                <SwiperSlide>
+                                <SwiperSlide key={i}>
                                     <img src={i} alt="" style={{width:'100%'}}/>
                                 </SwiperSlide>
                                 ))}
