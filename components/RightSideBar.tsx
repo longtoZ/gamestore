@@ -11,7 +11,7 @@ const RightSideBar = () => {
     <div className="overflow-hidden fixed top-0 right-0 w-72 h-screen bg-neutral-900 py-4 px-6 shadow-md z-20 border-l-4 border-neutral-800">
         <div className='flex justify-end w-full'>
             <h1 className='mx-4 font-bold' style={{transform:'translateY(0.5rem)'}}>Long To</h1>
-            <Image src="https://i.pinimg.com/originals/7e/7f/85/7e7f8539879d418e36154b1837a8abdd.jpg" alt="" className='w-10 h-10 rounded-full'/>
+            <Image width={-1} height={-1} src="https://i.pinimg.com/originals/7e/7f/85/7e7f8539879d418e36154b1837a8abdd.jpg" alt="" className='w-10 h-10 rounded-full'/>
         </div>
 
         <div className='mt-20'>
@@ -19,7 +19,7 @@ const RightSideBar = () => {
             <div className="absolute w-20 h-20 bg-purple-300 rounded-full filter blur-3xl opacity-70 animate-blob"></div>
             <ul className='mt-2'>
                 <li className="mb-2 flex p-3 rounded-lg bg-neutral-800 transition ease-in-out duration-200">
-                    <Image src="https://i.pinimg.com/originals/5f/9a/db/5f9adb90b78ee882768b1d5be8dc1c88.jpg" alt="" className='w-10 h-10 rounded-full mx-2' style={{transform:'translateY(0.5rem)'}}/>
+                    <Image width={100} height={100}  src="https://i.pinimg.com/originals/5f/9a/db/5f9adb90b78ee882768b1d5be8dc1c88.jpg" alt="" className='w-10 h-10 rounded-full mx-2' style={{transform:'translateY(0.5rem)'}}/>
                     <div>
                         <a href="/" className="block p-2 font-semibold">User 1</a>  
                         <p className='text-xs text-neutral-400 px-2'>Earned 1000 points!</p>
@@ -27,7 +27,7 @@ const RightSideBar = () => {
                 </li>
 
                 <li className="mb-2 flex p-3 rounded-lg bg-neutral-800 transition ease-in-out duration-200">
-                    <Image src="https://i.pinimg.com/originals/c4/e7/fb/c4e7fb53c319dc818fa9bdc7ee409517.jpg" alt="" className='w-10 h-10 rounded-full mx-2' style={{transform:'translateY(0.5rem)'}}/>
+                    <Image width={100} height={100}  src="https://i.pinimg.com/originals/c4/e7/fb/c4e7fb53c319dc818fa9bdc7ee409517.jpg" alt="" className='w-10 h-10 rounded-full mx-2' style={{transform:'translateY(0.5rem)'}}/>
                     <div>
                         <a href="/" className="block p-2 font-semibold">User 2</a>  
                         <p className='text-xs text-neutral-400 px-2'>Earned 800 points!</p>
@@ -35,7 +35,7 @@ const RightSideBar = () => {
                 </li>
 
                 <li className="mb-2 flex p-3 rounded-lg bg-neutral-800 transition ease-in-out duration-200">
-                    <Image src="https://i.pinimg.com/originals/73/07/e3/7307e31f753194eecc7c1eb3c358afae.jpg" alt="" className='w-10 h-10 rounded-full mx-2' style={{transform:'translateY(0.5rem)'}}/>
+                    <Image width={100} height={100}  src="https://i.pinimg.com/originals/73/07/e3/7307e31f753194eecc7c1eb3c358afae.jpg" alt="" className='w-10 h-10 rounded-full mx-2' style={{transform:'translateY(0.5rem)'}}/>
                     <div>
                         <a href="/" className="block p-2 font-semibold">User 3</a>  
                         <p className='text-xs text-neutral-400 px-2'>Earned 700 points!</p>
@@ -43,7 +43,7 @@ const RightSideBar = () => {
                 </li>
 
                 <li className="mb-2 flex p-3 rounded-lg bg-neutral-800 transition ease-in-out duration-200">
-                    <Image src="https://i.pinimg.com/originals/a9/93/c3/a993c386546beeee680bb455c20b9c6b.jpg" alt="" className='w-10 h-10 rounded-full mx-2' style={{transform:'translateY(0.5rem)'}}/>
+                    <Image width={100} height={100} src="https://i.pinimg.com/originals/a9/93/c3/a993c386546beeee680bb455c20b9c6b.jpg" alt="" className='w-10 h-10 rounded-full mx-2' style={{transform:'translateY(0.5rem)'}}/>
                     <div>
                         <a href="/" className="block p-2 font-semibold">User 4</a>  
                         <p className='text-xs text-neutral-400 px-2'>Earned 700 points!</p>

@@ -45,7 +45,7 @@ const Hero = () => {
     <AnimatePresence>
         <section ref={ref} style={{height:'110vh'}}>
             <motion.div className='relative' style={{y: backgroundY}}>
-                <Image alt="" src='/main_wallpaper.jpg' className='w-full' style={{filter:'brightness(0.7)', zIndex:'-5'}}/>
+                <motion.img alt="" src='/main_wallpaper.jpg' className='w-full' style={{filter:'brightness(0.7)', zIndex:'-5'}}/>
                 {/* <Image src="/simple_line_pattern_background.png" className='absolute top-0' style={{filter:'invert(1) opacity(0.1) blur(1px)'}}/> */}
                 {/* <div className='z-10 bottom-0 absolute w-full h-64 bg-gradient-to-t from-neutral-900'></div> */}
             </motion.div>
@@ -64,7 +64,7 @@ const Hero = () => {
           }
         })
       }} animate="visible" custom={0.4} className="mt-40 -mr-10 cursor-pointer" style={{filter:'drop-shadow(0px 0px 10px black)'}}>
-                <Image src="/img/four.png" alt="" className='h-96 object-cover parallelogram'/>
+                <motion.img src="/img/four.png" alt="" className='h-96 object-cover parallelogram'/>
             </motion.div>
 
             <motion.div variants={{
@@ -79,7 +79,7 @@ const Hero = () => {
           }
         })
       }} animate="visible" custom={0.8} className="mt-20 cursor-pointer" style={{filter:'drop-shadow(0px 0px 10px black)'}}>
-                <Image src="/img/one.jpg" alt="" className='h-96 object-cover parallelogram'/>
+                <motion.img src="/img/one.jpg" alt="" className='h-96 object-cover parallelogram'/>
             </motion.div>
 
             <motion.div variants={{
@@ -94,7 +94,7 @@ const Hero = () => {
           }
         })
       }} animate="visible" custom={1.2} className='-ml-10 cursor-pointer' style={{filter:'drop-shadow(0px 0px 10px black)'}}>
-                <Image src="/img/two.jpg" alt="" className='h-96 object-cover parallelogram'/>
+                <motion.img src="/img/two.jpg" alt="" className='h-96 object-cover parallelogram'/>
             </motion.div>
             </div>
             

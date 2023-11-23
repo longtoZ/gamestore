@@ -11,7 +11,7 @@ const Column = ({images, y=0}:any) => {
           {
             images.map((src: any, index: any) => {
               return <div key={index} className='image-container'>
-                <Image src={src} alt="image" className='object-cover'/>
+                <Image width={1000} height={1000} src={src} alt="image" className='object-cover'/>
               </div>
             })
           }

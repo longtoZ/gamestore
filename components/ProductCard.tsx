@@ -32,6 +32,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
     <div className="bg-neutral-800 rounded-lg shadow-md cursor-pointer overflow-hidden relative" style={{height:'28rem'}} onClick={() => router.push(`/products/${_id}`)}>
         <div className='relative'>
           <Image
+            width={1000}
+            height={1000}
             src={`${imageURL}`}
             alt={name}
             className="w-full h-52 object-coverrounded-2xl overflow-hidden rounded-lg"

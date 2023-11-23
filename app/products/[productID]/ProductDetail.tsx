@@ -59,7 +59,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
     return (
         <div className="relative">
             <div className="fixed w-full top-0">
-                <Image src={product.backgroundURL} alt="" className="w-full h-96 object-cover"/>
+                <Image width={1000} height={1000} src={product.backgroundURL} alt="" className="w-full h-96 object-cover"/>
                 <div className='z-10 absolute w-full h-52 bg-gradient-to-t from-neutral-900' style={{top:'11rem'}}></div>
             </div>
             <div className="relative mt-96">
@@ -67,6 +67,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                     <div className="grid grid-cols-1 md:grid-cols-2 w-2/3 mx-auto">
                         <div className="flex justify-center items-center">
                             <Image
+                                width={1000} height={1000}
                                 src={product.imageURL}
                                 alt={product.name}
                                 className="h-48 w-48 object-cover mb-4 rounded-lg"
@@ -106,7 +107,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                                 >
                                 {product.screenshots.map((i:string) => (
                                 <SwiperSlide key={i}>
-                                    <Image src={i} alt="" style={{width:'100%'}}/>
+                                    <Image width={1000} height={1000} src={i} alt="" style={{width:'100%'}}/>
                                 </SwiperSlide>
                                 ))}
                             </Swiper>

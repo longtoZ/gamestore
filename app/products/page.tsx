@@ -116,7 +116,7 @@ const Page: React.FC = () => {
                   <button className='bg-gradient-to-br from-green-400 to-blue-500 px-4 py-2 rounded-lg my-4 mx-2' onClick={() => router.push(`/products/${product._id}`)}>Buy now</button>
                   <button className='border px-4 py-2 rounded-lg mx-2'><AddCircleOutlineIcon style={{transform:'translateY(-0.1rem)', margin:'0 0.2rem'}}/>Add to wishlist</button>
                 </div>
-                <Image src={product.backgroundURL} alt="" style={{filter:'brightness(0.5)'}}/>
+                <Image fill src={product.backgroundURL} alt="" style={{filter:'brightness(0.5)'}}/>
               </SwiperSlide>
             ))}
             </Swiper>
