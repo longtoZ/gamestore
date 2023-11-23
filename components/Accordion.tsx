@@ -21,7 +21,7 @@ const TextWithParagraphs: React.FC<TextWithParagraphsProps> = ({ text }) => {
       <div>
         {/* Map through the paragraphs and render each one in a new <p> tag */}
         {paragraphs.map((paragraph) => (
-          <p>
+          <p key={paragraph}>
             {paragraph}
             <br/>
           </p>

@@ -74,7 +74,7 @@ const LoginForm = () => {
                     <a href="#" className="text-neutral-400 hover:underline">Forgot password?</a>
                 </div>
             </form>
-            <p className="text-center text-neutral-400 mt-6">Don't have an account? <a href="#" className="text-blue-500 hover:underline">Sign up</a></p>
+            <p className="text-center text-neutral-400 mt-6">Don&apos;t have an account? <a href="#" className="text-blue-500 hover:underline">Sign up</a></p>
         </div>
     </div>
 

@@ -29,7 +29,7 @@ const TextWithParagraphs: React.FC<TextWithParagraphsProps> = ({ text }) => {
       <div>
         {/* Map through the paragraphs and render each one in a new <p> tag */}
         {paragraphs.map((paragraph) => (
-          <p>
+          <p key={paragraph}>
             {paragraph}
             <br/>
           </p>
@@ -44,7 +44,7 @@ const TextWithBullet: React.FC<TextWithBulletProps> = ({ text }) => {
     return (
       <ul className="list-disc px-4">
         {paragraphs.map((paragraph) => (
-          <li>
+          <li key={paragraph}>
             {paragraph}
           </li>
         ))}

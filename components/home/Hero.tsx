@@ -9,7 +9,7 @@ import Lenis from '@studio-freight/lenis'
 const Hero = () => {
     const router = useRouter()
     const parallelogramDisplay = {
-        animate: (index: number) => ({
+        visible: (index: number) => ({
             y: 20,
             transition: {
               ease: 'easeInOut',
@@ -18,7 +18,6 @@ const Hero = () => {
               duration: 2,
               delay: index
           }
-    
         })
       }
     
@@ -52,15 +51,48 @@ const Hero = () => {
 
             <div
             className='absolute right-20 top-1/2 -translate-y-1/2 flex'>
-            <motion.div variants={parallelogramDisplay} animate="animate" custom={0.4} className="mt-40 -mr-10 cursor-pointer" style={{filter:'drop-shadow(0px 0px 10px black)'}}>
+            <motion.div variants={{
+        visible: (index: number) => ({
+            y: 20,
+            transition: {
+              ease: 'easeInOut',
+              repeatType: "reverse",
+              repeat: Infinity,
+              duration: 2,
+              delay: index
+          }
+        })
+      }} animate="visible" custom={0.4} className="mt-40 -mr-10 cursor-pointer" style={{filter:'drop-shadow(0px 0px 10px black)'}}>
                 <img src="/img/four.png" alt="" className='h-96 object-cover parallelogram'/>
             </motion.div>
 
-            <motion.div variants={parallelogramDisplay} animate="animate" custom={0.8} className="mt-20 cursor-pointer" style={{filter:'drop-shadow(0px 0px 10px black)'}}>
+            <motion.div variants={{
+        visible: (index: number) => ({
+            y: 20,
+            transition: {
+              ease: 'easeInOut',
+              repeatType: "reverse",
+              repeat: Infinity,
+              duration: 2,
+              delay: index
+          }
+        })
+      }} animate="visible" custom={0.8} className="mt-20 cursor-pointer" style={{filter:'drop-shadow(0px 0px 10px black)'}}>
                 <img src="/img/one.jpg" alt="" className='h-96 object-cover parallelogram'/>
             </motion.div>
 
-            <motion.div variants={parallelogramDisplay} animate="animate" custom={1.2} className='-ml-10 cursor-pointer' style={{filter:'drop-shadow(0px 0px 10px black)'}}>
+            <motion.div variants={{
+        visible: (index: number) => ({
+            y: 20,
+            transition: {
+              ease: 'easeInOut',
+              repeatType: "reverse",
+              repeat: Infinity,
+              duration: 2,
+              delay: index
+          }
+        })
+      }} animate="visible" custom={1.2} className='-ml-10 cursor-pointer' style={{filter:'drop-shadow(0px 0px 10px black)'}}>
                 <img src="/img/two.jpg" alt="" className='h-96 object-cover parallelogram'/>
             </motion.div>
             </div>

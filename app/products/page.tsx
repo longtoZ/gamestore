@@ -25,18 +25,12 @@ const Page: React.FC = () => {
 
   const router = useRouter();
   const categories = ['all', 'test1', 'test2', 'test3', 'test4'];
-  const slide_images = [
-  'https://cdn.discordapp.com/attachments/1173115642145153115/1173116408570327091/minecraft-background.jpg',
-  'https://cdn.discordapp.com/attachments/1173115642145153115/1173116409182683146/4k-call-of-duty-car-chase-7g9k0kcxxkyiazu5.jpg',
-  'https://cdn.discordapp.com/attachments/1173115642145153115/1173116410118025348/little-nightmares-big-black-hands-zrg3whxcn5olvtmv.jpg',
-  'https://cdn.discordapp.com/attachments/1173115642145153115/1173116410751369298/587593.png',
-  'https://cdn.discordapp.com/attachments/1173115642145153115/1173116411321790545/gta-5-qpjtjdxwbwrk4gyj.jpg']
 
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState<string>(categories[0]);
-  const [recommendedProducts, setRecommendedProducts] = useState([])
-  const [popularProducts, setPopularProducts] = useState([])
+  const [recommendedProducts, setRecommendedProducts] = useState<any>([])
+  const [popularProducts, setPopularProducts] = useState<any>([])
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -114,7 +108,7 @@ const Page: React.FC = () => {
             style={{height:'30rem'}}
             >
             {popularProducts.map((product: any) => (
-              <SwiperSlide>
+              <SwiperSlide key={product}>
                 <div className='absolute bottom-0 left-0 w-80 m-10 z-20'>
                   <h1 className='text-2xl my-4 font-bold'>{product.name}</h1>
                   <p className='opacity-70'>{product.shortDesc}</p>
@@ -165,7 +159,7 @@ const Page: React.FC = () => {
               style={{height:'32rem'}}
             >
               {recommendedProducts.map((product: any) => (
-                <SwiperSlide>
+                <SwiperSlide key={product}>
                   <ProductCard key={product._id} {...product} />
                 </SwiperSlide>
               ))}
@@ -192,7 +186,7 @@ const Page: React.FC = () => {
               style={{height:'32rem'}}
             >
               {popularProducts.map((product: any) => (
-                <SwiperSlide className='relative'>
+                <SwiperSlide className='relative' key={product}>
                   <div className='w-full absolute top-0 left-0 z-10 bg-red-500 rounded-t-lg py-1'>
                     <h1 className='text-center text-lg'>Best seller</h1>
                   </div>

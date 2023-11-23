@@ -1,7 +1,7 @@
 'use client'
 
 import React ,{ useState, useRef }from 'react'
-import {motion, useScroll, useTransform, useMotionTemplate, AnimatePresence} from 'framer-motion'
+import {motion, useScroll, useTransform, AnimatePresence} from 'framer-motion'
 import { Height } from '@mui/icons-material'
 
 
@@ -35,7 +35,7 @@ const Title = () => {
         <div className='my-20 mx-40 relative leading-none' style={{height:'60rem', fontSize:'10rem'}}>
             <motion.div className='title'>
                 {descList.map((e, index) => (
-                    <div onMouseEnter={() => {setHoverDesc(index)}} onMouseLeave={() => {setHoverDesc(-1)}} className='w-full ml-6 z-20'>
+                    <div key={index} onMouseEnter={() => {setHoverDesc(index)}} onMouseLeave={() => {setHoverDesc(-1)}} className='w-full ml-6 z-20'>
                         <h1 style={{letterSpacing: hoverDesc==index? '2rem' : '0rem', color: hoverDesc==index ? '#262626' : 'white', transition:'all 0.4s'}}>{e['title']}</h1>
                     </div>
                 ))}
@@ -43,7 +43,7 @@ const Title = () => {
 
             <div className='descriptions'>
                 {descList.map((e, index) => (
-                <div className='relative'>
+                <div className='relative' key={index}>
                     <h1 style={{clipPath: hoverDesc==index ? 'inset(0 0 0)' : 'inset(50% 0 50%)'}} className='description'>-</h1>
                     <p style={{opacity: hoverDesc==index ? '1' : '0'}} className='text-lg absolute top-1/2 right-10 -translate-y-1/2 w-80 text-right text-neutral-900'>{e['desc']}</p>
                     <div className='w-full border-b border-neutral-800'></div>
