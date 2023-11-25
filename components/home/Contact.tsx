@@ -12,9 +12,9 @@ const Contact = () => {
 
   return (
     <AnimatePresence>
-        <div ref={ref} className='relative py-20 overflow-hidden' style={{height:'110vh'}}>
+        <div ref={ref} className='relative py-20 ' style={{height:'110vh'}}>
             <motion.img src="/img/portal.jpg" alt="" className='absolute top-0 left-0 w-full -z-10' style={{top:backgroundY}}/>
-            <div className='grid grid-cols-2 w-1/2 mx-auto p-10 rounded-xl mt-20' style={{backdropFilter:'blur(10px)'}}>
+            <div className='grid grid-cols-2 w-2/3 mx-auto p-10 rounded-xl mt-20' style={{backdropFilter:'blur(10px)'}}>
                 <div>
                     <h1 className='font-bold text-6xl px-6'>Let&apos;s be in touch!</h1>
                 </div>

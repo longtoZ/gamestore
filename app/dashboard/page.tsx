@@ -39,7 +39,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   requirements
 }) => {
   return (
-    <div className="overflow-hidden w-full bg-neutral-800 my-4 rounded-lg p-4 bg-opacity-60 relative">
+    <div className="overflow-hidden w-full mx-auto bg-neutral-800 my-4 rounded-lg p-4 bg-opacity-60 relative" style={{width:'90%'}}>
       <div className="absolute w-full h-full -z-10 top-0 left-0" style={{backgroundImage:`url("${backgroundURL}")`, filter:'blur(5px)'}}></div>
       <div className="flex flex-row">
         <Image width={1000} height={1000} src={imageURL} className="h-48 w-48 object-cover rounded-lg" alt="img"/>

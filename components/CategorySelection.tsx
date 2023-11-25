@@ -14,7 +14,7 @@ const CategorySelection: React.FC<CategorySelectionProps> = ({ categories, selec
       {categories.map((category) => (
         <button
           key={category}
-          className={`w-20 px-4 py-2 rounded-md cursor-pointer transition ease-in-out duration-300 font-bold ${
+          className={`px-4 py-2 rounded-md cursor-pointer transition ease-in-out duration-300 font-bold ${
             selectedCategory === category ? 'bg-gradient-to-br from-green-400 to-blue-500 text-white' : 'bg-transparent'
           }`}
           onClick={() => onSelectCategory(category)}

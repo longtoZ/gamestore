@@ -25,7 +25,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 const Page: React.FC = () => {
 
   const router = useRouter();
-  const categories = ['all', 'test1', 'test2', 'test3', 'test4'];
+  const categories = ['All', 'Adventure', 'Controllers', 'PvP', 'Casual'];
 
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -81,7 +81,7 @@ const Page: React.FC = () => {
   const handleSelectCategory = (category: string) => {
     setSelectedCategory(category);
     // Filter and set the products based on the selected category
-    const filtered = category==categories[0] ? products : products.filter((product: any) => product.categories.includes(category.toLowerCase()));
+    const filtered = category==categories[0] ? products : products.filter((product: any) => product['category'].includes(category));
     setFilteredProducts(filtered);
   };
 
@@ -90,15 +90,8 @@ const Page: React.FC = () => {
       <div className='w-60'>
         <LeftSideBar/>
       </div>
-      <div className="mt-20 mx-auto" style={{width:'65%'}}>
+      <div className="mt-20 mx-auto" style={{width:'60%'}}>
         <div className='w-full mx-auto relative overflow-hidden rounded-xl' style={{height:'30rem'}}>
-          {/* <div className='z-10 absolute left-0 right-0 top-1/3'>
-            <h1 className='text-8xl text-center font-extrabold'>Game Store</h1>
-            <h1 className='text-6xl text-center font-semibold text-cyan-500'>Ultimate</h1>
-            <div className='w-full flex justify-center'>
-              <button className='w-40 mt-10 px-4 py-2 rounded-md cursor-pointer font-bold bg-gradient-to-br from-green-400 to-blue-500 text-white'>Explore ➤</button>
-            </div>
-          </div> */}
           <div>
             {/* <Carousel autoSlide={true} autoSlideInterval={50000} slides={slide_images} blur={true}/> */}
             <Swiper

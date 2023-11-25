@@ -25,7 +25,7 @@ const Quote = () => {
 
     const {x,y} = useMousePosition();
     const [isHovered, setIsHovered] = useState(false);
-    const size = isHovered ? 300 : 50
+    const size = isHovered ? 250 : 50
 
     const ref = useRef(null)
     const { scrollYProgress } = useScroll({
@@ -37,7 +37,7 @@ const Quote = () => {
 
   return (
     <AnimatePresence>
-        <div ref={ref} className='text-8xl text-center py-40 relative overflow-hidden' style={{height:'110vh'}}>
+        <div ref={ref} className='text-7xl text-center py-40 relative overflow-hidden' style={{height:'110vh'}}>
             <motion.img src="/img/dragon.jpg" alt="" className='absolute top-0 left-0 w-full -z-30' style={{top: backgroundY, filter:'grayscale(1) brightness(0.5) blur(2px)'}}/>
             <div className='w-1/3 mx-auto'>
                 <h1 className='text-3xl text-neutral-400 mb-6'>What I think</h1>

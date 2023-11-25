@@ -58,7 +58,7 @@ const Slides = () => {
         <Column images={[images[15], images[16], images[17]]} y={y6}/>
 
       </div>
-      <div className='absolute top-0 z-20 w-full h-full text-center leading-none bg-black bg-opacity-50' style={{fontSize:'12rem', paddingTop:'15rem'}}>
+      <div className='absolute top-0 z-20 w-full h-full text-center leading-none bg-black bg-opacity-50' style={{fontSize:'10rem', paddingTop:'15rem'}}>
           <h1>BROWSE</h1>
           <h1 className='font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-red-500'>THOUSANDS</h1>
           <h1>OF</h1>

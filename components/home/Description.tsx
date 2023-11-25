@@ -31,7 +31,7 @@ const Title = () => {
       ]
 
       return (
-        <div className='my-20 mx-40 relative leading-none' style={{height:'60rem', fontSize:'10rem'}}>
+        <div className='my-20 mx-20 relative leading-none' style={{height:'60rem', fontSize:'9rem'}}>
             <motion.div className='title'>
                 {descList.map((e, index) => (
                     <div key={index} onMouseEnter={() => {setHoverDesc(index)}} onMouseLeave={() => {setHoverDesc(-1)}} className='w-full ml-6 z-20'>

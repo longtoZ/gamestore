@@ -97,7 +97,7 @@ const Comments = () => {
             <section className='text-left my-52'>
                 <Reveal>
                     <div className='grid grid-cols-2'>
-                        <h1 style={{fontSize:'5rem'}}>
+                        <h1 style={{fontSize:'4rem'}}>
                             <span className='text-red-400'>&quot; </span>This is the biggest game site I&apos;ve ever seen.<span className='text-red-400'> &quot;</span>
                         </h1>
                         <motion.img src="/brand/twitch.png" alt="" variants={{
@@ -112,7 +112,7 @@ const Comments = () => {
           }
     
         })
-    }} animate='animate' className='mx-auto my-auto' style={{width:'16rem'}}/>
+    }} animate='animate' className='mx-auto my-auto' style={{width:'14rem'}}/>
                     </div>
                 </Reveal>
                 <Reveal>
@@ -135,8 +135,8 @@ const Comments = () => {
           }
     
         })
-    }} animate='animate' className='mx-auto my-auto' style={{width:'16rem'}}/>
-                        <h1 style={{fontSize:'5rem'}}>
+    }} animate='animate' className='mx-auto my-auto' style={{width:'14rem'}}/>
+                        <h1 style={{fontSize:'4rem'}}>
                             <span className='text-red-400'>&quot; </span>I love the variety of game categories presented in this store.<span className='text-red-400'> &quot;</span>
                         </h1>
                     </div>
@@ -150,7 +150,7 @@ const Comments = () => {
             <section className='text-left my-52'>
                 <Reveal>
                     <div className='grid grid-cols-2'>
-                        <h1 style={{fontSize:'5rem'}}>
+                        <h1 style={{fontSize:'4rem'}}>
                             <span className='text-red-400'>&quot; </span>Absolutely amazing! That&apos;s all I wanna say<span className='text-red-400'> &quot;</span>
                         </h1>
                         <motion.img src="/brand/youtube.png" alt="" variants={{
@@ -165,7 +165,7 @@ const Comments = () => {
           }
     
         })
-    }} animate='animate' className='mx-auto my-auto' style={{width:'16rem'}}/>
+    }} animate='animate' className='mx-auto my-auto' style={{width:'14rem'}}/>
                     </div>
                 </Reveal>
                 <Reveal>
@@ -188,8 +188,8 @@ const Comments = () => {
           }
     
         })
-    }} animate='animate' className='mx-auto my-auto' style={{width:'16rem'}}/>
-                        <h1 style={{fontSize:'5rem'}}>
+    }} animate='animate' className='mx-auto my-auto' style={{width:'14rem'}}/>
+                        <h1 style={{fontSize:'4rem'}}>
                             <span className='text-red-400'>&quot; </span>To be honest, this website should be more and more popular.<span className='text-red-400'> &quot;</span>
                         </h1>
                     </div>

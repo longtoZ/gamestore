@@ -63,8 +63,8 @@ const Hero = () => {
               delay: index
           }
         })
-      }} animate="visible" custom={0.4} className="mt-40 -mr-10 cursor-pointer" style={{filter:'drop-shadow(0px 0px 10px black)'}}>
-                <motion.img src="/img/four.png" alt="" className='h-96 object-cover parallelogram'/>
+      }} animate="visible" custom={0.4} className="mt-40 -mr-8 cursor-pointer" style={{filter:'drop-shadow(0px 0px 10px black)'}}>
+                <motion.img src="/img/four.png" alt="" className='md:h-72 lg:h-80 object-cover parallelogram'/>
             </motion.div>
 
             <motion.div variants={{
@@ -79,7 +79,7 @@ const Hero = () => {
           }
         })
       }} animate="visible" custom={0.8} className="mt-20 cursor-pointer" style={{filter:'drop-shadow(0px 0px 10px black)'}}>
-                <motion.img src="/img/one.jpg" alt="" className='h-96 object-cover parallelogram'/>
+                <motion.img src="/img/one.jpg" alt="" className='md:h-72 lg:h-80 object-cover parallelogram'/>
             </motion.div>
 
             <motion.div variants={{
@@ -93,12 +93,12 @@ const Hero = () => {
               delay: index
           }
         })
-      }} animate="visible" custom={1.2} className='-ml-10 cursor-pointer' style={{filter:'drop-shadow(0px 0px 10px black)'}}>
-                <motion.img src="/img/two.jpg" alt="" className='h-96 object-cover parallelogram'/>
+      }} animate="visible" custom={1.2} className='-ml-8 cursor-pointer' style={{filter:'drop-shadow(0px 0px 10px black)'}}>
+                <motion.img src="/img/two.jpg" alt="" className='md:h-72 lg:h-80 object-cover parallelogram'/>
             </motion.div>
             </div>
             
-            <div className='flex flex-row absolute top-1/3 left-40'>
+            <div className='flex flex-row absolute top-1/3 left-28'>
             <div className='relative basis-1/2'>
                 <div className='mb-10'>
                 <span className='text-7xl font-extrabold'>Discover </span>
