@@ -32,6 +32,8 @@ const Page: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>(categories[0]);
   const [recommendedProducts, setRecommendedProducts] = useState<any>([])
   const [popularProducts, setPopularProducts] = useState<any>([])
+  const [exclusiveProducts, setExclusiveProducts] = useState<any>([])
+
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -44,7 +46,8 @@ const Page: React.FC = () => {
         setFilteredProducts(data);
         setRecommendedProducts(handleRecommendedProducts(data))
         setPopularProducts(handlePopularProducts(data))
-        
+        setExclusiveProducts(handleExclusiveProducts(data))
+
       } catch (error) {
         console.error('Error fetching products:', error);
       }
@@ -76,6 +79,18 @@ const Page: React.FC = () => {
 
   const handlePopularProducts = (data: any) => {
     return [data[0], data[1], data[2], data[3], data[4], data[5]]
+  }
+
+  const handleExclusiveProducts = (data: any) => {
+    const final: any[] = []
+
+    for (let i=0; i<data.length; i++) {
+      if (data[i]['exclusive'] == true) {
+        final.push(data[i])
+      }
+    }
+
+    return final
   }
   
   const handleSelectCategory = (category: string) => {
@@ -189,7 +204,35 @@ const Page: React.FC = () => {
               ))}
             </Swiper>
           </div>
+        </div>
 
+        <div className='mt-10'>
+          <div className='w-full flex justify-between my-6 mt-16'>
+            <h1 className="text-4xl font-bold"><span className=' text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500'>Exclusive</span> games</h1>
+            <a href="/products/category" className='flex items-center text-blue-500'>View more...</a>
+          </div>
+          <div>
+            <Swiper
+              slidesPerView={4}
+              spaceBetween={20}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              modules={[Pagination, Navigation]}
+              className="mySwiper"
+              style={{height:'32rem'}}
+            >
+              {exclusiveProducts.map((product: any) => (
+                <SwiperSlide className='relative' key={product}>
+                  <div className='w-full absolute top-0 left-0 z-10 bg-green-500 rounded-t-lg py-1'>
+                    <h1 className='text-center text-lg'>Editor choice</h1>
+                  </div>
+                  <ProductCard key={product._id} {...product} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
 
         <div className='mt-10'>

@@ -21,7 +21,8 @@ interface ProductCardProps {
   backgroundURL:string;
   shortDesc:string;
   screenshots: string[];
-  requirements: string[]
+  requirements: string[];
+  link:string
 }
 
 
@@ -36,7 +37,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
   backgroundURL,
   shortDesc,
   screenshots,
-  requirements
+  requirements,
+  link
 }) => {
   return (
     <div className="overflow-hidden w-full mx-auto bg-neutral-800 my-4 rounded-lg p-4 bg-opacity-60 relative" style={{width:'90%'}}>
@@ -50,7 +52,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
           <p className="mt-2">{category}</p>
           {/* <AccordionItem title="Long description" content={desc}/> */}
           <div className="flex justify-end mt-4">
-            <EditPopup _id={_id} name={name} category={category} price={price} imageURL={imageURL} rating={rating} desc={desc} backgroundURL={backgroundURL} shortDesc={shortDesc} screenshots={screenshots} requirements={requirements}/>
+            <EditPopup _id={_id} name={name} category={category} price={price} imageURL={imageURL} rating={rating} desc={desc} backgroundURL={backgroundURL} shortDesc={shortDesc} screenshots={screenshots} requirements={requirements} link={link}/>
             <DeleteProduct _id={_id}/>
           </div>
         </div>

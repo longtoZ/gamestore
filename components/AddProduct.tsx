@@ -20,6 +20,8 @@ const AddProduct = () => {
     const [screenshotsEdit4, setScreenshots4] = useState("");
     const [minimumRequirements, setMinimumRequirements] = useState("")
     const [recommendedRequirements, setRecommendedRequirements] = useState("")
+    const [linkEdit, setLink] = useState("");
+
     
     const handleSave = async (e: any) => {
         e.preventDefault()
@@ -45,6 +47,7 @@ const AddProduct = () => {
                     requirements: [
                         minimumRequirements, recommendedRequirements
                     ],
+                    link: linkEdit
                 })
             })
 
@@ -184,6 +187,14 @@ const AddProduct = () => {
                                     className="resize-y w-full rounded-lg p-2 mb-4 bg-neutral-700"
                                 />
                             </div>
+
+                            <label className="block mb-2">Link to resource:</label>
+                            <input
+                                type="text"
+                                value={linkEdit}
+                                onChange={(e) => setLink(e.target.value)}
+                                className="w-full rounded-lg p-2 mb-4 bg-neutral-700"
+                            />
 
                             <div className="flex justify-end">
                                 <button

@@ -14,10 +14,11 @@ interface EditPopupProps {
     shortDesc:string;
     screenshots: string[];
     requirements: string[];
+    link:string;
 }
   
 
-const EditPopup = ({_id,name,category,price,imageURL,rating,desc,backgroundURL,shortDesc,screenshots,requirements}:EditPopupProps) => {
+const EditPopup = ({_id,name,category,price,imageURL,rating,desc,backgroundURL,shortDesc,screenshots,requirements,link}:EditPopupProps) => {
     const [showModal, setShowModal] = useState(false)
     const [nameEdit, setName] = useState(name);
     const [categoryEdit, setCategory] = useState(category);
@@ -34,6 +35,8 @@ const EditPopup = ({_id,name,category,price,imageURL,rating,desc,backgroundURL,s
     const [screenshotsEdit4, setScreenshots4] = useState(screenshots[4]);
     const [minimumRequirements, setMinimumRequirements] = useState(requirements[0])
     const [recommendedRequirements, setRecommendedRequirements] = useState(requirements[1])
+    const [linkEdit, setLink] = useState(link)
+
 
     const handleSave = async (e: any) => {
         e.preventDefault()
@@ -59,6 +62,7 @@ const EditPopup = ({_id,name,category,price,imageURL,rating,desc,backgroundURL,s
                     requirements: [
                         minimumRequirements, recommendedRequirements
                     ],
+                    link: linkEdit
                 })
             })
 
@@ -196,6 +200,14 @@ const EditPopup = ({_id,name,category,price,imageURL,rating,desc,backgroundURL,s
                                     className="resize-y w-full rounded-lg p-2 mb-4 bg-neutral-700"
                                 />
                             </div>
+
+                            <label className="block mb-2">Link to resource:</label>
+                            <input
+                                type="text"
+                                value={linkEdit}
+                                onChange={(e) => setLink(e.target.value)}
+                                className="w-full rounded-lg p-2 mb-4 bg-neutral-700"
+                            />
 
                             <div className="flex justify-end">
                                 <button
