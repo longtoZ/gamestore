@@ -15,10 +15,11 @@ interface EditPopupProps {
     screenshots: string[];
     requirements: string[];
     link:string;
+    exclusive: boolean;
 }
   
 
-const EditPopup = ({_id,name,category,price,imageURL,rating,desc,backgroundURL,shortDesc,screenshots,requirements,link}:EditPopupProps) => {
+const EditPopup = ({_id,name,category,price,imageURL,rating,desc,backgroundURL,shortDesc,screenshots,requirements,link, exclusive}:EditPopupProps) => {
     const [showModal, setShowModal] = useState(false)
     const [nameEdit, setName] = useState(name);
     const [categoryEdit, setCategory] = useState(category);
@@ -62,7 +63,8 @@ const EditPopup = ({_id,name,category,price,imageURL,rating,desc,backgroundURL,s
                     requirements: [
                         minimumRequirements, recommendedRequirements
                     ],
-                    link: linkEdit
+                    link: linkEdit,
+                    exclusive: false
                 })
             })
 

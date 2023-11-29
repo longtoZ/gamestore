@@ -76,8 +76,12 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                         </div>
                         <div>
                             <h1 className="text-3xl font-medium">{product.name}</h1>
+                            {product.exclusive ? <p className=" font-bold text-yellow-400 mt-4">This game is created by our editor</p> : null}
                             <p className="text-sm text-neutral-400 mt-4">{product.shortDesc}</p>
-                            <button onClick={() => router.push(`/payment/${product._id}`)} className='w-48 my-4 px-4 py-2 rounded-md cursor-pointer font-medium bg-gradient-to-br from-green-400 to-blue-500 text-white'>Buy at ${product.price}</button>
+                            {product.exclusive ?
+                                <button onClick={() => router.push(`/payment/${product._id}`)} className='w-48 my-4 px-4 py-2 rounded-md cursor-pointer font-medium bg-gradient-to-br from-amber-400 to-orange-500 text-white'>Buy at ${product.price}</button> :
+                                <button onClick={() => router.push(`/payment/${product._id}`)} className='w-48 my-4 px-4 py-2 rounded-md cursor-pointer font-medium bg-gradient-to-br from-green-400 to-blue-500 text-white'>Buy at ${product.price}</button>
+                            }
                             <div>
                                 <Rating value={product.rating} readOnly/>
                             </div>

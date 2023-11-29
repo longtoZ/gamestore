@@ -196,3 +196,130 @@ body::-webkit-scrollbar-thumb {
   background-color: #171717;
   opacity: 1
 }
+
+.AboutTeam {
+  display: inline-flex;
+  margin: 30px;
+  align-items: center;
+}
+
+.OurTeam {
+  margin: 20px;
+  text-align: center;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+}
+
+.Our {
+  color: #F3F4F6;
+}
+
+.Team {
+  color: #EAB308;
+}
+
+.MemberImage {
+  display: flex;
+  padding: 4vw;
+  align-items: center;
+}
+
+.MemberImage  img {
+  width: 400px;
+  height: 400px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  object-fit: cover; 
+  object-position: 35% 40%;
+  border: 0.5vw solid #EAB308;
+  /* overflow: hidden;  */
+}
+
+.Infor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 50px;
+}
+
+.MemberName {
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  /* line-height: 64px; 152.381% */
+
+}
+
+.About {
+  color: #F3F4F6;
+}
+
+.Name {
+  color: #EAB308;
+}
+
+.Introduce {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  color: #6B7280;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  margin-right: 10px;
+  /* margin: 5px; */
+  /* line-height: 27px; 168.75% */
+}
+
+.Contact {
+  display: inline-flex;
+  margin-top: 10px;
+}
+
+.Text {
+  padding: 18px 20px;
+  align-items: flex-start;
+  gap: 10px;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  border-radius: 4px;
+  background: #EAB308;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 90%;
+  margin-left: 2vw;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #1877F2;
+  color: white;
+}
+
+.fa-instagram {
+  text-align: center;
+  color: #fff;
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+
+.fa-google {
+background: #dd4b39;
+color: white;
+}

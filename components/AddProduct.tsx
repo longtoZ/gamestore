@@ -47,7 +47,8 @@ const AddProduct = () => {
                     requirements: [
                         minimumRequirements, recommendedRequirements
                     ],
-                    link: linkEdit
+                    link: linkEdit,
+                    exclusive: false
                 })
             })
 

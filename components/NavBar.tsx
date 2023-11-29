@@ -62,9 +62,9 @@ const NavBar: React.FC = () => {
 
       {/* Navigation Links */}
       <div className="flex items-center space-x-4">
-        {/* <Link href="/products" className="text-white">
+        <Link href="/products" className="text-white">
           Products
-        </Link> */}
+        </Link>
         <Link href="/about" className="text-white">
           About
         </Link>

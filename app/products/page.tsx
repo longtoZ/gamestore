@@ -225,7 +225,7 @@ const Page: React.FC = () => {
             >
               {exclusiveProducts.map((product: any) => (
                 <SwiperSlide className='relative' key={product}>
-                  <div className='w-full absolute top-0 left-0 z-10 bg-green-500 rounded-t-lg py-1'>
+                  <div className='w-full absolute top-0 left-0 z-10 bg-yellow-500 rounded-t-lg py-1'>
                     <h1 className='text-center text-lg'>Editor choice</h1>
                   </div>
                   <ProductCard key={product._id} {...product} />
