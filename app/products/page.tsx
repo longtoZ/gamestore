@@ -25,7 +25,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 const Page: React.FC = () => {
 
   const router = useRouter();
-  const categories = ['All', 'Adventure', 'Controllers', 'PvP', 'Casual'];
+  const categories = ['All', 'Adventure', 'Controllers', 'PvP', 'Casual', 'Action'];
 
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);

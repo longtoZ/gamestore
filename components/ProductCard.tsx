@@ -29,7 +29,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   const router = useRouter();
 
   return (
-    <div className="bg-neutral-800 rounded-lg shadow-md cursor-pointer overflow-hidden relative" style={{height:'26rem'}} onClick={() => router.push(`/products/${_id}`)}>
+    <div className="bg-neutral-800 rounded-lg shadow-md cursor-pointer overflow-hidden relative hover:translate-y-3 hover:bg-neutral-700 transition-all duration-400" style={{height:'24rem'}} onClick={() => router.push(`/products/${_id}`)}>
         <div className='relative'>
           <Image
             width={1000}
@@ -47,7 +47,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
           <p className="text-sm text-neutral-400 mt-2">{category}</p>
           
           <div className="flex justify-between items-center mt-4">
-            <Rating value={rating} className='mt-3'readOnly/>
+            <Rating value={rating} className='mt-3 text-lg'readOnly/>
             <button className='py-2 px-4 text-sm bg-transparent text-blue-500 border border-blue-500 rounded hover:bg-blue-500 hover:text-neutral-200 hover:border-transparent transition ease-in-out'>See more</button>
           </div>
         </div>
