@@ -133,19 +133,19 @@ const Page: React.FC = () => {
 
         <div className='w-2/3 mx-auto grid grid-cols-4 gap-4 mt-10'>
           <div className='mx-auto w-32 h-32 rounded-lg text-center flex justify-center flex-col cursor-pointer cardElement' style={{background: '#1e1e1e'}}>
-            <VideogameAssetIcon className='w-full text-5xl text-cyan-400'/>
+            <VideogameAssetIcon className='w-full text-5xl text-cyan-400 mx-auto' style={{fontSize:'3rem'}}/>
             <p className='text-sm text-neutral-400 mt-1'>Consoles</p>
           </div>
           <div className='mx-auto w-32 h-32 rounded-lg text-center flex justify-center flex-col cursor-pointer cardElement' style={{background: '#1e1e1e'}}>
-            <ExtensionIcon className='w-full text-5xl text-cyan-400'/>
+            <ExtensionIcon className='w-full text-5xl text-cyan-400 mx-auto' style={{fontSize:'3rem'}}/>
             <p className='text-sm text-neutral-400 mt-1'>Games</p>
           </div>
           <div className='mx-auto w-32 h-32 rounded-lg text-center flex justify-center flex-col cursor-pointer cardElement' style={{background: '#1e1e1e'}}>
-            <HeadphonesIcon className='w-full text-5xl text-cyan-400'/>
+            <HeadphonesIcon className='w-full text-5xl text-cyan-400 mx-auto' style={{fontSize:'3rem'}}/>
             <p className='text-sm text-neutral-400 mt-1'>Accessories</p>
           </div>
           <div className='mx-auto w-32 h-32 rounded-lg text-center flex justify-center flex-col cursor-pointer cardElement' style={{background: '#1e1e1e'}}>
-            <AddShoppingCartIcon className='w-full text-5xl text-cyan-400'/>
+            <AddShoppingCartIcon className='w-full text-5xl text-cyan-400 mx-auto' style={{fontSize:'3rem'}}/>
             <p className='text-sm text-neutral-400 mt-1'>Deals</p>
           </div>
         </div>
